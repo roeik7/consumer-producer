@@ -8,7 +8,7 @@ Of course when one of the threads (producer or consumer) intends to write or rea
 This file contains the implementations for the synchronization.<br/>
 First, the semaphores and mutexes are initialized. Then all threads (consumers / producers) are created.<br/>
 Once everyone has been booted and created, the program gets them started (by exec_prod, exec_cons).<br/>
-The synchronization happens by two semaphores that each symbolize how many free / empty cells in the buffer and 3 mutexes.<br/>
+The synchronization happens by two semaphores that each symbolize how many cells in the buffer ared created (for consumer) and how many cells in the buffer are empty.  In addition i used 3 mutexes.<br/>
 One that controls access to the buffer, one that controls access to the stdout, and one lock that controls how many items are consumed in order for a thread to know if there is any point in waiting to take action.
 
 + **ex3_q2_items_operation.c**
