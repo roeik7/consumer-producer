@@ -2,8 +2,8 @@
 <br/>
 Implemented an algorithm that synchronizes between consumers/producers.<br/>
 The input to the program is the number of consumers, the number of producers, the number of items to consume and the size of the buffer <br/>
-Of course when one of the threads (producer or consumer) intends to write or read from the buffer the access is done atomically, and this happens with the help of locks and mutexes.
- <br/>
+Of course when one of the threads (producer or consumer) intends to write or read from the buffer the access is done atomically, and this happens with the help of locks and mutexes.<br/>
+ 
 + **ex3_q2.c** 
 This file contains the realization for synchronization.<br/>
 First, the semaphores and mutexes are initialized. Then all threads (consumers / producers) are created.<br/>
