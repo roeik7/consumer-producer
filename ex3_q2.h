@@ -10,7 +10,7 @@
 #include <sys/wait.h> 
 #include <semaphore.h>
 #include <pthread.h>
-#include "ex3_q2_given.h"
+#include "ex3_q2_items_operation.h"
 
 typedef struct {
 	lluint products[BUF_SIZE];	//buffer
