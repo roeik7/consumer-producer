@@ -5,7 +5,7 @@ The input to the program is the number of consumers, the number of producers, th
 Of course when one of the threads (producer or consumer) intends to write or read from the buffer the access is done atomically, and this happens with the help of locks and mutexes.<br/>
  
 + **ex3_q2.c** 
-This file contains the realization for synchronization.<br/>
+This file contains the implementations for the synchronization.<br/>
 First, the semaphores and mutexes are initialized. Then all threads (consumers / producers) are created.<br/>
 Once everyone has been booted and created, the program gets them started (by exec_prod, exec_cons).<br/>
 The synchronization happens by two semaphores that each symbolize how many free / empty cells in the buffer and 3 mutexes.<br/>
