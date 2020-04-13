@@ -1,13 +1,14 @@
 # consumer-producer
 <br/>
 Implemented an algorithm that synchronizes between consumers/producers.<br/>
+Each of the consumers/producers is represented by thread.<br/>
 The input to the program is the number of consumers, the number of producers, the number of items to consume and the size of the buffer <br/>
-Of course when one of the threads (producer or consumer) intends to write or read from the buffer the access is done atomically, and this happens with the help of locks and mutexes.<br/>
+Of course when one of the threads (producer or consumer) intends to write or read from the buffer the access is done atomically, and this is done with the help of locks and mutexes.<br/>
  
 + **ex3_q2.c** 
 This file contains the implementations for the synchronization.<br/>
-First, the semaphores and mutexes are initialized. Then all threads (consumers / producers) are created.<br/>
-Once everyone has been booted and created, the program gets them started (by exec_prod, exec_cons).<br/>
+First, the semaphores and mutexes are initialized. Then all threads (consumers / producers) are created and by conditional variable waiting to wake and get started.<br/>
+Once all the threads are booted and created, the program gets them started (by exec_prod, exec_cons functions).<br/>
 The synchronization happens by two semaphores that each symbolize how many cells in the buffer ared created (for consumer) and how many cells in the buffer are empty.  In addition i used 3 mutexes.<br/>
 One that controls access to the buffer, one that controls access to the stdout, and one lock that controls how many items are consumed in order for a thread to know if there is any point in waiting to take action.
 
